@@ -1,0 +1,13 @@
+h2{
+    color:olivedrab;
+}
+table {
+        border: olivedrab;
+        border-block: solid;
+        writing-mode: horizontal-tb;
+        padding:50px
+      }
+table,tr,td,td{
+    border-color: olivedrab;
+    color:green;
+}

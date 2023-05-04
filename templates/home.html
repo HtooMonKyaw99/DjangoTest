@@ -1,13 +1,17 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+
 </head>
 <body>
 <div class="container">
-  <h1>HTML registration form with varification</h1>
-  <form name="registration" class="registartion-form" onsubmit="return formValidation()">
+  <h2>HTML registration form with verification</h2>
+  <form name="registration" class="registartion-form" onsubmit="" method="POST" action="test">
+       {% csrf_token %}
     <table>
       <tr>
         <td><label for="name">Name:</label></td>
@@ -23,35 +27,9 @@
       </tr>
       <tr>
         <td><label for="phoneNumber">Phone Number:</label></td>
-        <td><input type="number" name="phoneNumber" id="phoneNumber"></td>
+        <td><input type="number" name="phone" id="phoneNumber"></td>
       </tr>
-      <tr>
-        <td><label for="gender">Gender:</label></td>
-        <td>Male: <input type="radio" name="gender" value="male">
-          Female: <input type="radio" name="gender" value="female">
-          Other: <input type="radio" name="gender" value="other"></td>
-      </tr>
-      <tr>
-        <td><label for="language">language</label></td>
-        <td>
-          <select name="language" id="language">
-            <option value="">Select language</option>
-            <option value="English">English</option>
-            <option value="Spanish">Spanish</option>
-            <option value="Hindi">Hindi</option>
-            <option value="Arabic">Arabic</option>
-            <option value="Russian">Russian</option>
-          </select>
-        </td>
-      </tr>
-      <tr>
-        <td><label for="zipcode">Zip Code:</label></td>
-        <td><input type="number" name="zipcode" id="zipcode"></td>
-      </tr>
-      <tr>
-        <td><label for="about">About:</label></td>
-        <td><textarea name="about" id="about" placeholder="Write about yourself..."></textarea></td>
-      </tr>
+
       <tr>
         <td colspan="2"><input type="submit" class="submit" value="Register" /></td>
       </tr>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Showing Information</title>
+    <style>
+      .box {
+        border: 2px solid black;
+        background-color: lightgray;
+        padding: 10px;
+        width:50%
+      }
+    </style>
+</head>
+<body>
+<h1> Submitted Form Data</h1>
+<h2> Your input was received as: </h2>
+{#{% for key,value in info.items %}#}
+{#<h2>{{ key }} :{{ value }}</h2>#}
+{#<hr>#}
+{#{% endfor %}#}
+<div class="box">
+    <ul>
+        {% for key,value in info.items %}
+            <li> {{ key }} :{{ value }} </li>
+        {% endfor %}
+    </ul>
+</div>
+</body>
+</html>

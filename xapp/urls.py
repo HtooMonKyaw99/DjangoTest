@@ -6,5 +6,6 @@ urlpatterns = [
     path("", views.nist, name="nist"),
     path("add/",views.add,name="Add"),
     path("testhtml/",views.geeks_view,name="greek"),
-    path("home2html/",views.home2,name="home2")
+    path("home2html/",views.home2,name="home2"),
+    path("testhtml/test",views.testing,name="test")
 ]
