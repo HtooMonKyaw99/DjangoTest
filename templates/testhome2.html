@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+
+</head>
+<body>
+<div class="container">
+  <h2>HTML registration form with verification</h2>
+  <form name="registration" class="registartion-form" onsubmit="" method="POST" action="test">
+       {% csrf_token %}
+    <table>
+      <tr>
+        <td><label for="name">Name:</label></td>
+        <td><input type="text" name="name" id="name" placeholder="your name"></td>
+      </tr>
+      <tr>
+        <td><label for="email">Email:</label></td>
+        <td><input type="text" name="email" id="email" placeholder="your email"></td>
+      </tr>
+      <tr>
+        <td><label for="password">Password:</label></td>
+        <td><input type="password" name="password" id="password"></td>
+      </tr>
+      <tr>
+        <td><label for="phoneNumber">Phone Number:</label></td>
+        <td><input type="number" name="phone" id="phoneNumber"></td>
+      </tr>
+
+      <tr>
+        <td colspan="2"><input type="submit" class="submit" value="Register" /></td>
+      </tr>
+    </table>
+  </form>
+</div>
+</body>
+</html>

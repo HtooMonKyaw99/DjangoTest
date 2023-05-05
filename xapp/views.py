@@ -10,7 +10,7 @@ def geeks_view(request):
     # and return HTML as response
     return render(request, "home.html")
 def home2(request):
-    return render(request,"home1.html",{'test':'Django Testing'})
+    return render(request,"home1.html")
 
 def nist(request):
     return HttpResponse("Hello ! I'm a django tester begineer!!!!")
